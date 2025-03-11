@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математика 1-ші сынып</title>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Diploma work\Shabyt\1class\math1.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Математика 1-ші сынып</h1>
+        <p>Барлық 80 сабақтарға арналған YouTube видео</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Сабақты іздеу..." onkeyup="filterLessons()">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Lessons Section -->
+        <section class="lessons-section">
+            <h2>Сабақтар тізімі</h2>
+            <div class="lesson-grid">
+                <!-- Сабақ 1 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/PHdVzhLC2j8?si=Kt4xxuH5DdZmMWT_')"> 
+                    <h3>Сабақ 1</h3>
+                    <p>Көпбұрыш. Дөңес көпбұрыш.</p>
+                </div>
+
+                <!-- Сабақ 2 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/aDjFVzRz9yQ?si=T8oYB0UIP_70DODQ')"> 
+                    <h3>Сабақ 2</h3>
+                    <p>Параллелограмм және оның қасиеттері.</p>
+                </div>
+
+                <!-- Сабақ 3 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/SU21Ps8PdCg?si=RF8IYjoJo9tEce0c')"> 
+                    <h3>Сабақ 3</h3>
+                    <p>Параллелограмм және оның қасиеттері. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 4 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/FRegwUjkQV0?si=73ovaRKZB7mPULWw')"> 
+                    <h3>Сабақ 4</h3>
+                    <p>Тік төртбұрыш, ромб, шаршы және олардың қасиеттері.</p>
+                </div>
+
+                <!-- Сабақ 5 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/p3XGrt_LKNg?si=KqAAoXnbMNuoqn2d')"> 
+                    <h3>Сабақ 5</h3>
+                    <p>Тік төртбұрыш, ромб, шаршы және олардың қасиеттері. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 6 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/VUxTxXR8zrk?si=WMcqre_mMHLpOrYZ')"> 
+                    <h3>Сабақ 6</h3>
+                    <p>Төртбұрыштарды элементтері бойынша салу.</p>
+                </div>
+
+                <!-- Сабақ 7 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/SeAezP_X9LA?si=76D8KnWjIb7n-eFC')"> 
+                    <h3>Сабақ 7</h3>
+                    <p>Төртбұрыштарды элементтері бойынша салу. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 8 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/XeOUhJ_6sms?si=9cEnU-yah3MzAfwo')"> 
+                    <h3>Сабақ 8</h3>
+                    <p>Фалес теоремасы. Үшбұрыштың орта сызығы.</p>
+                </div>
+
+                <!-- Сабақ 9 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/X6wnXS4Ywjs?si=9bu0m8QrNXA2_5hI')"> 
+                    <h3>Сабақ 9</h3>
+                    <p>Фалес теоремасы. Үшбұрыштың орта сызығы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 10 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/DC1bbldOKNs?si=s7z2Czs6K5uq-Phz')"> 
+                    <h3>Сабақ 10</h3>
+                    <p>Трапеция және оның қасиеттері.</p>
+                </div>
+
+                <!-- Сабақ 11 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/iR1ZmdPKY3s?si=LhPmjiwLm_wO2qTZ')"> 
+                    <h3>Сабақ 11</h3>
+                    <p>Трапеция және оның қасиеттері. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 12 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/RRzxsikKUs0?si=elQHMzETZAUA_cwW')"> 
+                    <h3>Сабақ 12</h3>
+                    <p>Үшбұрыштың тамаша нүктелері. Үшбұрышқа сырттай және іштей сызылған шеңберлер.</p>
+                </div>
+
+                <!-- Сабақ 13 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/6_dTmXx9Qag?si=cheKbJTh2tsFVVcJ')"> 
+                    <h3>Сабақ 13</h3>
+                    <p>Үшбұрыштың тамаша нүктелері. Үшбұрышқа сырттай және іштей сызылған шеңберлер. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 14 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/hRMjNndnOXk?si=b7zJuHv3jzshd-5Y')"> 
+                    <h3>Сабақ 14</h3>
+                    <p>Үшбұрыштың тамаша нүктелері. Үшбұрышқа сырттай және іштей сызылған шеңберлер. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 15 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/6R300ZuOIC0?si=nzJlM6raNb-2BEcP')"> 
+                    <h3>Сабақ 15</h3>
+                    <p>Шеңберге іштей және сырттай сызылған төртбұрыштар.</p>
+                </div>
+
+                <!-- Сабақ 16 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/51cO_-BnFBw?si=3QP6gBYZNChHS7ZV')"> 
+                    <h3>Сабақ 16</h3>
+                    <p>Шеңберге іштей және сырттай сызылған төртбұрыштар. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 17 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/1q_mSHTddt4?si=HyDaVg8vgyJsWZyS')"> 
+                    <h3>Сабақ 17</h3>
+                    <p>Пропорционал кесінділер.</p>
+                </div>
+
+                <!-- Сабақ 18 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/ePFe4APnKQY?si=MyuM1OEbJhVFzZYT')"> 
+                    <h3>Сабақ 18</h3>
+                    <p>Пифагор теоремасы.</p>
+                </div>
+
+                <!-- Сабақ 19 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/r-c2bKwsgC8?si=HRcZM3D3TyqdK1Fs')"> 
+                    <h3>Сабақ 19</h3>
+                    <p>Пропорционал кесінділер. Пифагор теоремасы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Сабақ 20 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/suAAfLpXSVQ?si=aDGNfS0MKYiqbn5s')"> 
+                    <h3>Сабақ 20</h3>
+                    <p>Пропорционал кесінділер. Пифагор теоремасы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+\
+                <!-- Lesson 21 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/5PQTfV4gGxc?si=hlwtdEXC5apA3z6I')"> 
+                    <h3>Сабақ 21</h3>
+                    <p>Пропорционал кесінділер. Пифагор теоремасы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 22 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/CKo9FMjAE8k?si=GubL5OpqDp4scnu7')"> 
+                    <h3>Сабақ 22</h3>
+                    <p>Пропорционал кесінділер. Пифагор теоремасы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 23 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/QeL4OQxZAKE?si=4p6cocufhM8t9deX')"> 
+                    <h3>Сабақ 23</h3>
+                    <p>Пропорционал кесінділер. Пифагор теоремасы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 24 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/oT4zqid1H2M?si=7sqFhWxqmhafst_3')"> 
+                    <h3>Сабақ 24</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. 1 бөлім.</p>
+                </div>
+
+                <!-- Lesson 25 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/deGzWx3h8Bo?si=3X1FBK9JHewC3HiL')"> 
+                    <h3>Сабақ 25</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. 2 бөлім.</p>
+                </div>
+
+                <!-- Lesson 26 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/mtoErxNbkF8?si=D5FZUZOOO9GhioJ4')"> 
+                    <h3>Сабақ 26</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. 3 бөлім.</p>
+                </div>
+
+                <!-- Lesson 27 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/dgWluRKExVE?si=Ri2qHN1zmOj93qg9')"> 
+                    <h3>Сабақ 27</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 28 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/p3YifhBHCxU?si=WRUKDUXK3sii9PC5')"> 
+                    <h3>Сабақ 28</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 29 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/WtFRdcZIDXo?si=0kL6yHjBqBFoKzP-')"> 
+                    <h3>Сабақ 29</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 30 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/a4k4x65dlE0?si=4X5ybu7eOovBFhPj')"> 
+                    <h3>Сабақ 30</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 31 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/SwLgAwG8lSg?si=4v6ltI-vGTXDXd_M')"> 
+                    <h3>Сабақ 31</h3>
+                    <p>Сүйір бұрыштың синусы, тангенсі және котангенсі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 32 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/VP_6Xj3HphQ?si=9EFRw3N7pRacHgqR')"> 
+                    <h3>Сабақ 32</h3>
+                    <p>Тік бұрышты үшбұрыштарды шешу.</p>
+                </div>
+
+                <!-- Lesson 33 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/wQ18UKxjo4U?si=EjzYGbcqX-Iieg84')"> 
+                    <h3>Сабақ 33</h3>
+                    <p>Тік бұрышты үшбұрыштарды шешу. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 34 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/Phrt0zEFZ-E?si=HxM-MVekIRy_vP1q')"> 
+                    <h3>Сабақ 34</h3>
+                    <p>Тік бұрышты үшбұрыштарды шешу. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 35 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/OxMl01Z41ZU?si=vzpMihjCY_V0I9N7')"> 
+                    <h3>Сабақ 35</h3>
+                    <p>Тік бұрышты үшбұрыштарды шешу. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 36 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/QFUihUM-XCY?si=CtiyhAVCA-f15P65')"> 
+                    <h3>Сабақ 36</h3>
+                    <p>Тік төртбұрыштың ауданы.</p>
+                </div>
+
+                <!-- Lesson 37 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/QFUihUM-XCY?si=CtiyhAVCA-f15P65')"> 
+                    <h3>Сабақ 37</h3>
+                    <p>Тік төртбұрыштың ауданы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 38 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/0fsYC2msc74?si=QPK8hvz6Aq1d2hsN')"> 
+                    <h3>Сабақ 38</h3>
+                    <p>Тік төртбұрыштың ауданы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 39 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/5cU3WSe4zrc?si=4ZWIwZnaHxSKiO_8')"> 
+                    <h3>Сабақ 39</h3>
+                    <p>Параллелограмның ауданы.</p>
+                </div>
+
+                <!-- Lesson 40 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/BJTUWkXfqWw?si=BzQKiCm6BCkBJmjt')"> 
+                    <h3>Сабақ 40</h3>
+                    <p>Үшбұрыштың ауданы.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-section">
+            <a href="#" class="logo">Sha<span>byt</span></a>
+            <p>Біз балаларға математиканы оңай үйрену үшін осы платформаны жасадық.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Жылдам Сілтемелер</h3>
+            <ul>
+                <li><a href="#">Басты бет</a></li>
+                <li><a href="#">Сабақтар</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакт</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Байланыс</h3>
+            <p><i class='bx bx-map'></i> Алматы, Қазақстан</p>
+            <p><i class='bx bx-phone'></i> +7 777 777 77 77</p>
+            <p><i class='bx bx-envelope'></i> info@shabyt.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+            <h3>Бізбен байланысу</h3>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Shabyt. Барлық құқықтар қорғалған.</p>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script src="C:\Users\user\Desktop\Diploma work\Shabyt\1class\math1.js"></script>
+</body>
+</html>

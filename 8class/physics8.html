@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Физика 8-ші сынып</title>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Diploma work\Shabyt\1class\math1.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Физика 8-ші сынып</h1>
+        <p>Барлық 80 сабақтарға арналған YouTube видео</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Сабақты іздеу..." onkeyup="filterLessons()">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Lessons Section -->
+        <section class="lessons-section">
+            <h2>Сабақтар тізімі</h2>
+            <div class="lesson-grid">
+                <!-- Lesson 1 -->
+                <!-- Сабақ 1 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/vXHb9Uv25ZM?si=hOa2JyRVy9f5lXo9')"> 
+                    <h3>Сабақ 1</h3>
+                    <p>Жылулық қозғалыс. Броундық қозғалыс. Диффузия.</p>
+                </div>
+
+                <!-- Сабақ 2 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/Teah6XNp72o?si=1dJ_xZEmJJNPDrGN')"> 
+                    <h3>Сабақ 2</h3>
+                    <p>Температура және оны өлшеу әдістері.</p>
+                </div>
+
+                <!-- Сабақ 3 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/qUMlscQsje0?si=mKPXKOvQ2-2jYIWf')"> 
+                    <h3>Сабақ 3</h3>
+                    <p>Ішкі энергия және оны өзгерту тәсілдері.</p>
+                </div>
+
+                <!-- Сабақ 4 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/DKUx4ZmsFX8?si=beBzQQzG6YJSzlYO')"> 
+                    <h3>Сабақ 4</h3>
+                    <p>Жылу өткізгіштік, конвекция, сәуле шығару.</p>
+                </div>
+
+                <!-- Сабақ 5 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/T0HkPWSJPvs?si=0RSCuv8orbJg8VUI')"> 
+                    <h3>Сабақ 5</h3>
+                    <p>Отынның жану жылуы.</p>
+                </div>
+
+                <!-- Сабақ 6 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/-0yZHlhRr1o?si=zlZ5lwu8qgiTF_h-')"> 
+                    <h3>Сабақ 6</h3>
+                    <p>Отынның жану жылуы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 7 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/ci0LyHkFZC8?si=P2yztGvZDuGAaeKO')"> 
+                    <h3>Сабақ 7</h3>
+                    <p>Жылу құбылыстарындағы энергияның сақталу заңы.</p>
+                </div>
+
+                <!-- Сабақ 8 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/V3Z0ipA6KHo?si=XH6Ec98BMe5roey3')"> 
+                    <h3>Сабақ 8</h3>
+                    <p>Жылу құбылыстарындағы энергияның сақталу заңы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 9 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/WZSvUft2NSY?si=SNXK942Kh5Cfkaec')"> 
+                    <h3>Сабақ 9</h3>
+                    <p>Балқу жане қатаю.</p>
+                </div>
+
+                <!-- Сабақ 10 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/CNxyfp5E5bg?si=aS9fX9k5pDNOXXVA')"> 
+                    <h3>Сабақ 10</h3>
+                    <p>Балқу жане қатаю. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 11 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/fUeiFwdeSpQ?si=BmzPzIF8Cv1jxSpH')"> 
+                    <h3>Сабақ 11</h3>
+                    <p>Кебу және конденсация.</p>
+                </div>
+
+                <!-- Сабақ 12 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/2l2ApP_KT88?si=RTMeqlsa4UFD3v-8')"> 
+                    <h3>Сабақ 12</h3>
+                    <p>Қайнау. Меншікті булану жылуы.</p>
+                </div>
+
+                <!-- Сабақ 13 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/rppbrzYogO0?si=WDA_sD3ESuEz7xrP')"> 
+                    <h3>Сабақ 13</h3>
+                    <p>Қайнау. Меншікті булану жылуы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 14 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/aQ-6uzGLu3o?si=mxL87Ql-TvOl2Hwy')"> 
+                    <h3>Сабақ 14</h3>
+                    <p>Қайнау. Меншікті булану жылуы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 15 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/ZbLBxaMVXbk?si=pmgE4hQP6_YDh5UT')"> 
+                    <h3>Сабақ 15</h3>
+                    <p>Термодинамиканың 1 заңы.</p>
+                </div>
+
+                <!-- Сабақ 16 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/0wOWNVnf1nQ?si=EPRZAilscpN4XUJ8')"> 
+                    <h3>Сабақ 16</h3>
+                    <p>Термодинамиканың 1 заңы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 17 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/-Os3i7DuVBg?si=kpqLnUZbolEc2R82')"> 
+                    <h3>Сабақ 17</h3>
+                    <p>Термодинамиканың 2 заңы.</p>
+                </div>
+
+                <!-- Сабақ 18 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/x246y5iEUx0?si=jWzp3LKbKlP7T6EE')"> 
+                    <h3>Сабақ 18</h3>
+                    <p>Жылу қозғалтқыштары. ПӘК.</p>
+                </div>
+
+                <!-- Сабақ 19 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/WrpazTVHgZs?si=jMhFGjk70SkLhnAs')"> 
+                    <h3>Сабақ 19</h3>
+                    <p>Жылу қозғалтқыштары. ПӘК. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 20 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/U2YOCUkxhO4?si=AR8N9_SK4leYQc5v')"> 
+                    <h3>Сабақ 20</h3>
+                    <p>Электр өрісі. Электр өріс кернеулігі.</p>
+                </div>
+                <!-- Сабақ 20 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/OatNks-UtGI?si=icYquOQGkOP5IFXo')"> 
+                    <h3>Сабақ 20</h3>
+                    <p>Электр өрісі. Электр өріс кернеулігі.</p>
+                </div>
+
+                <!-- Сабақ 21 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/OatNks-UtGI?si=8uBxtwTnzI5CFS-H')"> 
+                    <h3>Сабақ 21</h3>
+                    <p>Электр өрісі. Электр өріс кернеулігі. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 22 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/yxOkGUlHaJQ?si=on9Ib2wyWH2Zb_9C')"> 
+                    <h3>Сабақ 22</h3>
+                    <p>Электр өрісінің потенциалы. Потенциалдар айырымы.</p>
+                </div>
+
+                <!-- Сабақ 23 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/vmpXTsihcsA?si=-ro5mPXo6PuZjq65')"> 
+                    <h3>Сабақ 23</h3>
+                    <p>Электр өрісінің потенциалы. Потенциалдар айырымы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 24 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/G2-NP9J4eMA?si=lUBUxpbxv9N5bqbT')"> 
+                    <h3>Сабақ 24</h3>
+                    <p>Электр тогы. Ток күші.</p>
+                </div>
+
+                <!-- Сабақ 25 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/1GL2guTfBW0?si=TMzKy3djct2TrnvG')"> 
+                    <h3>Сабақ 25</h3>
+                    <p>Электр тогы. Ток күші. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 26 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/Zr6IybUO39g?si=XLo9lHj6ItNF_e8k')"> 
+                    <h3>Сабақ 26</h3>
+                    <p>Конденсатор және оның сыйымдылығы.</p>
+                </div>
+
+                <!-- Сабақ 27 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/BQWPMNUf4cY?si=M71aB_-sR2WHDkir')"> 
+                    <h3>Сабақ 27</h3>
+                    <p>Конденсатор және оның сыйымдылығы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 28 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/VEDLAtOVZjs?si=XgZhIRVDv983r-Vu')"> 
+                    <h3>Сабақ 28</h3>
+                    <p>Кернеу. Электр тізбегі.</p>
+                </div>
+
+                <!-- Сабақ 29 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/fegeMKctRRA?si=dyek_oeGREps0WuV')"> 
+                    <h3>Сабақ 29</h3>
+                    <p>Кернеу. Электр тізбегі. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 30 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/PQsI0jzvbhE?si=a2eg-6wGt3FqXIk3')"> 
+                    <h3>Сабақ 30</h3>
+                    <p>Электрену. Электр заряды.</p>
+                </div>
+
+                <!-- Сабақ 31 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/XPt_iutRmfY?si=hpETXlhmYE1ynIXK')"> 
+                    <h3>Сабақ 31</h3>
+                    <p>Зарядтың сақталу заңы. Кулон заңы.</p>
+                </div>
+
+                <!-- Сабақ 32 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/pijgXnjEL7c?si=9r3le6lO0LHRJKY3')"> 
+                    <h3>Сабақ 32</h3>
+                    <p>Зарядтың сақталу заңы. Кулон заңы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 33 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/X8XLI7uw-qw?si=6xBRK4UQHLbgBrj6')"> 
+                    <h3>Сабақ 33</h3>
+                    <p>Кедергі. Меншікті кедергі.</p>
+                </div>
+
+                <!-- Сабақ 34 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/69d3pemFUAg?si=4q8Unp0HD11UtJhZ')"> 
+                    <h3>Сабақ 34</h3>
+                    <p>Кедергі. Меншікті кедергі. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 35 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/W5WtI_3LYwo?si=g-z33_obVtXdj77C')"> 
+                    <h3>Сабақ 35</h3>
+                    <p>Тізбек бөлігі үшін Ом заңы.</p>
+                </div>
+
+                <!-- Сабақ 36 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/JQRq9cc4ypM?si=wppHyAicsPtfpsP-')"> 
+                    <h3>Сабақ 36</h3>
+                    <p>Тізбек бөлігі үшін Ом заңы. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 37 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/xJ2oeAu6WG0?si=VSErJJUbC4ESD-9p')"> 
+                    <h3>Сабақ 37</h3>
+                    <p>Өткізгіштерді тізбектей және параллель қосу.</p>
+                </div>
+
+                <!-- Сабақ 38 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/yY4_s93zn9o?si=VieFEqSSN3c_57Rz')"> 
+                    <h3>Сабақ 38</h3>
+                    <p>Өткізгіштерді тізбектей және параллель қосу. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 39 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/v8Q3gjvM56A?si=eK_FZ48A3lm6MqDJ')"> 
+                    <h3>Сабақ 39</h3>
+                    <p>Өткізгіштерді тізбектей және параллель қосу. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 40 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/CuhkWeX3hqE?si=QR6BuG1k7L3v5G9Y')"> 
+                    <h3>Сабақ 40</h3>
+                    <p>Электр тогының жұмысы мен қуаты.</p>
+                </div>
+
+                <!-- Сабақ 41 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/ec7ZDjzYafM?si=XPCT6PqB2KjtHOCC')"> 
+                    <h3>Сабақ 41</h3>
+                    <p>Электр тогының жұмысы мен қуаты. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 42 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/nn5VkwtYTAk?si=6haUQ0kfVeZcsYKC')"> 
+                    <h3>Сабақ 42</h3>
+                    <p>Джоуль-Ленц заңы. Токтың ПӘК.</p>
+                </div>
+
+                <!-- Сабақ 43 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/oSjK74VVFr8?si=Fr2A8olqNzTUPb8B')"> 
+                    <h3>Сабақ 43</h3>
+                    <p>Джоуль-Ленц заңы. Токтың ПӘК. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Сабақ 44 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/xLfVewF9L-E?si=zt5sKW2jY5WPOSUb')"> 
+                    <h3>Сабақ 44</h3>
+                    <p>Металдардың электр кедергісінің температураға тәуелділігі.</p>
+                </div>
+
+                <!-- Сабақ 45 -->
+                <div class="lesson-card" onclick="openVideo('https://youtu.be/eq2VtRyRgBY?si=pRs2oRCxVzLytD6R')"> 
+                    <h3>Сабақ 45</h3>
+                    <p>Металдардың электр кедергісінің температураға тәуелділігі. Практикалық бөлім.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-section">
+            <a href="#" class="logo">Sha<span>byt</span></a>
+            <p>Біз балаларға математиканы оңай үйрену үшін осы платформаны жасадық.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Жылдам Сілтемелер</h3>
+            <ul>
+                <li><a href="#">Басты бет</a></li>
+                <li><a href="#">Сабақтар</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакт</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Байланыс</h3>
+            <p><i class='bx bx-map'></i> Алматы, Қазақстан</p>
+            <p><i class='bx bx-phone'></i> +7 777 777 77 77</p>
+            <p><i class='bx bx-envelope'></i> info@shabyt.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+            <h3>Бізбен байланысу</h3>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Shabyt. Барлық құқықтар қорғалған.</p>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script src="C:\Users\user\Desktop\Diploma work\Shabyt\1class\math1.js"></script>
+</body>
+</html>

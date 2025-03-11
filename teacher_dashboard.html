@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Shabyt</title>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Diploma work\Shabyt\Teachers\teacher.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Shabyt</h2>
+        </div>
+        <ul class="menu">
+            <li class="active"><a href="#dashboard"><i class='bx bx-grid-alt'></i>Dashboard</a></li>
+            <li><a href="#students"><i class='bx bx-user'></i>Students</a></li>
+            <li><a href="#grades"><i class='bx bx-bar-chart-alt-2'></i>Grades</a></li>
+            <li><a href="#materials"><i class='bx bx-upload'></i>Upload Materials</a></li>
+            <li><a href="C:\Users\user\Desktop\Diploma work\Shabyt\form.html"><i class='bx bx-log-out'></i>Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="header-title">
+                <h1>Teacher Dashboard</h1>
+                <p>Welcome back, Teacher!</p>
+            </div>
+            <div class="profile">
+                <img src="img/profile.jpg" alt="Profile Picture">
+                <span>John Doe</span>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard-section">
+            <h2>Overview</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class='bx bx-user'></i>
+                    <h3>Total Students</h3>
+                    <p>45</p>
+                </div>
+                <div class="card">
+                    <i class='bx bx-book'></i>
+                    <h3>Uploaded Materials</h3>
+                    <p>12</p>
+                </div>
+                <div class="card">
+                    <i class='bx bx-task'></i>
+                    <h3>Pending Tasks</h3>
+                    <p>3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students" class="students-section hidden">
+            <h2>Students List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anna Smith</td>
+                        <td>anna@example.com</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Grades Section -->
+        <section id="grades" class="grades-section hidden">
+            <h2>Grades</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Anna Smith</td>
+                        <td>Math</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Science</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Upload Materials Section -->
+        <section id="materials" class="materials-section hidden">
+            <h2>Upload Materials</h2>
+            <form id="upload-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Enter material title" required>
+                <label for="file">File:</label>
+                <input type="file" id="file" required>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <!-- Announcements Section -->
+        <section id="announcements" class="announcements-section hidden">
+            <h2>Announcements</h2>
+            <div class="announcement-card">
+                <h3>Exam Schedule Released</h3>
+                <p>The final exam schedule has been released. Please check your emails for details.</p>
+            </div>
+            <div class="announcement-card">
+                <h3>Parent-Teacher Meeting</h3>
+                <p>A parent-teacher meeting is scheduled for next Friday at 3 PM.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="C:\Users\user\Desktop\Diploma work\Shabyt\Teachers\teacher.js"></script>
+</body>
+</html>

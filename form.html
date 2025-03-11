@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Diploma work\Shabyt\form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      /* Add this CSS for the video background */
+      body {
+          margin: 0;
+          padding: 0;
+          overflow: hidden; /* Prevent scrolling */
+          font-family: 'Montserrat', sans-serif;
+      }
+
+      .video-background {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1; /* Place the video behind other elements */
+          object-fit: cover; /* Ensure the video covers the entire screen */
+      }
+
+      .login-container {
+          position: relative;
+          z-index: 1; /* Ensure the login form is above the video */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+      }
+  </style>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function togglePasswordVisibility(inputId, iconId) {
+            const passwordInput = document.getElementById(inputId);
+            const eyeIcon = document.getElementById(iconId);
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove('bx-show');
+                eyeIcon.classList.add('bx-hide');
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove('bx-hide');
+                eyeIcon.classList.add('bx-show');
+            }
+        }
+
+        document.getElementById('toggle-login-password')?.addEventListener('click', function () {
+            togglePasswordVisibility('login-password', 'toggle-login-password');
+        });
+        document.getElementById('toggle-signup-password').addEventListener('click', function () {
+  togglePasswordVisibility('signup-password', 'toggle-signup-password');
+});
+    });
+</script>
+
+    <body>
+      <!-- Video Background -->
+    <!-- <video autoplay muted loop class="video-background">
+      <source src="C:\Users\user\Desktop\Diploma work\Shabyt\img\background-login.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video> -->
+<section>
+  <div class="main-form-container">
+    <div id="form_section" class="form-container">
+      <div class="login-form form-wraper ">
+        <div>
+          <div class="form-title">
+            <h2>Login</h2>
+          </div>
+          <div class="input-group">
+            <div class="box">
+              <span>
+                <input placeholder="Email" class="myInput" type="text" />
+              </span>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="box">
+              <span>
+                <input placeholder="Password" class="myInput" type="password" id="login-password"/>
+                <i class='bx bx-show' id="toggle-login-password" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+              </span>
+            </div>
+          </div>
+          <div class="forget-password">
+            <a href="forgot_password.html">FORGOT PASSWORD</a>
+          </div>
+          <div class="action-button">
+            <button>Login</button>
+          </div>
+        </div>
+      </div>
+      <div class="signUp-form form-wraper">
+        <div>
+          <div class="form-title">
+            <h2>Sign Up</h2>
+          </div>
+          <div class="input-group">
+            <div class="box">
+              <span>
+                <input placeholder="Full Name" class="myInput" type="text" />
+              </span>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="box">
+              <span>
+                <input placeholder="Email" class="myInput" type="text" />
+              </span>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="box">
+              <span>
+                <input placeholder="Mobile No." class="myInput" type="number" />
+              </span>
+            </div>
+          </div>
+          <div style="margin-bottom: 0px;" class="input-group">
+            <div class="box">
+              <span>
+                <input placeholder="Password" class="myInput" type="password" id="signup-password"/>
+                <i class='bx bx-show' id="toggle-signup-password" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+              </span>
+            </div>
+            <small id="password-error" style="color: red; display: none;">
+              <p>Құпия сөзде әріптер, сандар және арнайы таңбаларды қоса алғанда кемінде 8 таңба болуы керек.</p>
+          </small>
+          </div>
+          <div class="input-group">
+            <div class="box">
+              <span>
+                <select class="myInput" id="role">
+                  <option value="student">Оқушы</option>
+                  <option value="teacher">Мұғалім</option>
+                </select>
+              </span>
+            </div>
+          </div>
+          <div class="action-button">
+            <button>Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="multiple-btn" class="bg-btn-container">
+      <div class="action-button">
+        <button>Login</button>
+      </div>
+      <div class="action-button">
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script src="C:\Users\user\Desktop\Diploma work\Shabyt\form.js"></script>
+</body>
+</html>
