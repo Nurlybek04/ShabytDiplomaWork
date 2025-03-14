@@ -63,10 +63,20 @@ type Claims struct {
 	jwt.RegisteredClaims
 }
 
+type Class struct {
+	ID    uint   `gorm:"primaryKey"`
+	Grade int    `gorm:"not null"` // Класс (1-11)
+	Name  string `gorm:"not null"` // Название, например "Математика"
+}
+
 type Lesson struct {
 	ID         uint   `gorm:"primaryKey"`
 	Title      string `gorm:"not null"`
 	YoutubeURL string `gorm:"not null"`
+	ClassID    uint   `gorm:"not null"`
+	Class      Class  `gorm:"foreignKey:ClassID"`
+	TeacherID  uint   `gorm:"not null"`
+	Teacher    User   `gorm:"foreignKey:TeacherID"`
 }
 
 var db *gorm.DB
@@ -83,6 +93,7 @@ func initDB() {
 
 	db.AutoMigrate(&User{})
 	db.AutoMigrate(&Lesson{})
+	db.AutoMigrate(&Class{})
 }
 
 // func register(c *gin.Context) {
@@ -189,8 +200,18 @@ func createLesson(c *gin.Context) {
 }
 
 func getLessons(c *gin.Context) {
+	// var lessons []Lesson
+	// db.Find(&lessons)
+
+	// c.JSON(http.StatusOK, lessons)
 	var lessons []Lesson
-	db.Find(&lessons)
+	classID := c.Query("class_id") // Получаем class_id из запроса
+
+	if classID != "" {
+		db.Where("class_id = ?", classID).Find(&lessons)
+	} else {
+		db.Find(&lessons)
+	}
 
 	c.JSON(http.StatusOK, lessons)
 }
