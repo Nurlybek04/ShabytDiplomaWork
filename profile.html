@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Shabyt - Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <aside class="w-64 bg-black text-white p-6 flex flex-col justify-between">
+        <aside class="w-64 bg-black text-white p-6 flex flex-col justify-between fixed h-full">
             <div>
                 <h1 class="text-2xl font-bold text-red-500">Shabyt</h1>
                 <nav class="mt-6 space-y-4">
@@ -33,14 +33,14 @@
                     </a>
                 </nav>
             </div>
-            <div>
+            <div class="mt-auto pb-6">
                 <a href="#" class="block text-gray-300 hover:text-white">❓ Help</a>
                 <a href="#" class="block text-gray-300 hover:text-white mt-4">🚪 Log out</a>
             </div>
         </aside>
         
         <!-- Main Content -->
-        <main class="flex-1 p-8">
+        <main class="flex-1 p-8 ml-64 overflow-auto">
             <!-- Header -->
             <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md">
                 <input type="text" placeholder="Search" class="border p-2 rounded-lg w-1/2">
@@ -83,23 +83,32 @@
                         <div class="p-4 border rounded-lg shadow-sm">
                             <img src="https://via.placeholder.com/150" class="w-full h-32 object-cover rounded-md mb-2">
                             <p class="font-bold">Physics</p>
-                            <p class="text-sm text-gray-500"></p>
                             <p class="text-xs text-gray-500">Lorem ipsum dolor sit amet...</p>
-                            <p class="font-bold text-red-500"></p>
                         </div>
                         <div class="p-4 border rounded-lg shadow-sm">
                             <img src="https://via.placeholder.com/150" class="w-full h-32 object-cover rounded-md mb-2">
                             <p class="font-bold">Mathematics</p>
-                            <p class="text-sm text-gray-500"></p>
                             <p class="text-xs text-gray-500">Advanced algebra and calculus...</p>
-                            <p class="font-bold text-red-500"></p>
                         </div>
                         <div class="p-4 border rounded-lg shadow-sm">
                             <img src="https://via.placeholder.com/150" class="w-full h-32 object-cover rounded-md mb-2">
                             <p class="font-bold">Chemistry</p>
-                            <p class="text-sm text-gray-500"></p>
                             <p class="text-xs text-gray-500">Organic and inorganic chemistry...</p>
-                            <p class="font-bold text-red-500"></p>
+                        </div>
+                        <div class="p-4 border rounded-lg shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="w-full h-32 object-cover rounded-md mb-2">
+                            <p class="font-bold">Chemistry</p>
+                            <p class="text-xs text-gray-500">Organic and inorganic chemistry...</p>
+                        </div>
+                        <div class="p-4 border rounded-lg shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="w-full h-32 object-cover rounded-md mb-2">
+                            <p class="font-bold">Chemistry</p>
+                            <p class="text-xs text-gray-500">Organic and inorganic chemistry...</p>
+                        </div>
+                        <div class="p-4 border rounded-lg shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="w-full h-32 object-cover rounded-md mb-2">
+                            <p class="font-bold">Chemistry</p>
+                            <p class="text-xs text-gray-500">Organic and inorganic chemistry...</p>
                         </div>
                     </div>
                 </div>
