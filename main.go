@@ -70,7 +70,7 @@ type Class struct {
 }
 
 type Lesson struct {
-	ID         uint   `gorm:"primaryKey"`
+	ID         uint   `gorm:"primaryKey;autoIncrement"`
 	Title      string `gorm:"not null"`
 	YoutubeURL string `gorm:"not null"`
 	ClassID    uint   `gorm:"not null"`
@@ -186,6 +186,30 @@ func login(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"token": tokenString})
 }
 
+func createClass(c *gin.Context) {
+	var input Class
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Неверный формат запроса"})
+		return
+	}
+
+	// Проверяем, существует ли уже класс с таким же Grade и Name
+	var existingClass Class
+	if err := db.Where("grade = ? AND name = ?", input.Grade, input.Name).First(&existingClass).Error; err == nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Такой класс уже существует"})
+		return
+	}
+
+	// Создаем новый класс
+	class := Class{Grade: input.Grade, Name: input.Name}
+	if err := db.Create(&class).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Ошибка при создании класса"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Класс успешно создан", "class": class})
+}
+
 func createLesson(c *gin.Context) {
 	var input Lesson
 	if err := c.ShouldBindJSON(&input); err != nil {
@@ -250,13 +274,22 @@ func updateLesson(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Lesson updated successfully", "lesson": lesson})
 }
 func deleteLesson(c *gin.Context) {
-	var lesson Lesson
-	if err := db.First(&lesson, c.Param("id")).Error; err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Lesson not found"})
+	// var lesson Lesson
+	// if err := db.First(&lesson, c.Param("id")).Error; err != nil {
+	// 	c.JSON(http.StatusNotFound, gin.H{"error": "Lesson not found"})
+	// 	return
+	// }
+
+	// db.Delete(&lesson)
+
+	// c.JSON(http.StatusOK, gin.H{"message": "Lesson deleted successfully"})
+	id := c.Param("id") // Получаем ID урока из URL
+
+	// Удаляем урок
+	if err := db.Delete(&Lesson{}, id).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete lesson"})
 		return
 	}
-
-	db.Delete(&lesson)
 
 	c.JSON(http.StatusOK, gin.H{"message": "Lesson deleted successfully"})
 }
@@ -280,6 +313,8 @@ func main() {
 	r.POST("/register", register)
 	r.POST("/login", login)
 	r.POST("/send-email", sendEmailHandler)
+
+	r.POST("/classes", createClass)
 
 	r.Run(":8080")
 }
