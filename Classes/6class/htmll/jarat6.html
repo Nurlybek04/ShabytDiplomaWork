@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жаратылыстану 6-шы сынып</title>
+    <link rel="stylesheet" href="C:\Users\user\Desktop\Diploma work\Shabyt\Classes\8class\csss\alg8.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Жаратылыстану 6-шы сынып</h1>
+        <p>Барлық сабақтарға арналған YouTube видео</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Сабақты іздеу..." onkeyup="filterLessons()">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Lessons Section -->
+        <section class="lessons-section">
+            <h2>Сабақтар тізімі</h2>
+            <div class="lesson-grid">
+                <!-- Lesson 1 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/SjdLQWZu1MY?si=YsFMWR-fD4Qg-TUD')"> 
+                    <h3>Сабақ 1</h3>
+                    <p>Квадрат түбір анықтамасы.</p>
+                </div>
+                <!-- Lesson 2 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/3I9vBo4uPzE?si=zfaIhfntZDs9sQGB')"> 
+                    <h3>Сабақ 2</h3>
+                    <p>Квадрат түбір анықтамасы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 3 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/QtCCmAcjdwI?si=s_d8TaaO-RyQetgJ')"> 
+                    <h3>Сабақ 3</h3>
+                    <p>Квадрат теңдеулер. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 4 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/1q3eSg9zoiQ?si=lxhkbHYx0u623bby')"> 
+                    <h3>Сабақ 4</h3>
+                    <p>Иррационал сан ұғымы.</p>
+                </div>
+
+                <!-- Lesson 5 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/73d_quFOns4?si=1evnwcFxYFcF91pg')"> 
+                    <h3>Сабақ 5</h3>
+                    <p>Иррационал сан ұғымы. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 6 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/5e-TNzuZuYs?si=KQRPLovrSCbjPqnO')"> 
+                    <h3>Сабақ 6</h3>
+                    <p>Квадрат түбір және иррационал өрнек. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 7 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/dFoYurqckQ8?si=oNTUvRtcW8Tb5EvP')"> 
+                    <h3>Сабақ 7</h3>
+                    <p>Нақты сандармен түзу нүктелерінің сәйкестігі.</p>
+                </div>
+
+                <!-- Lesson 8 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/5ccHMhrvzH8?si=XjuiP38Pw3HRkldG')"> 
+                    <h3>Сабақ 8</h3>
+                    <p>Нақты сандармен түзу нүктелерінің сәйкестігі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 9 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/4MJx9cSu9qA?si=3abHtZkb3X2tGD7B')"> 
+                    <h3>Сабақ 9</h3>
+                    <p>Квадрат түбірдің қасиеттері.</p>
+                </div>
+
+                <!-- Lesson 10 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/I_Ejm9dZGCM?si=LaIG4WaJG_XuCiI9')"> 
+                    <h3>Сабақ 10</h3>
+                    <p>Квадрат түбірдің қасиеттері. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 11 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/m7r17LpAfGg?si=jzoSgUogl45DxPBa')"> 
+                    <h3>Сабақ 11</h3>
+                    <p>y=x√2 функциясының графигі.</p>
+                </div>
+
+                <!-- Lesson 12 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/JJSOjToLMSU?si=u_r4-LYuWCS4TJwr')"> 
+                    <h3>Сабақ 12</h3>
+                    <p>y=x√2 функциясының графигі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 13 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/Sz0G7_eojVY?si=cLukjNp8kyR-dUuP')"> 
+                    <h3>Сабақ 13</h3>
+                    <p>y=x√2 функциясының графигі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 14 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/IHrlQDJk5l8?si=MPa-bH4Gr-QjtCkb')"> 
+                    <h3>Сабақ 14</h3>
+                    <p>Квадрат теңдеу және оның түбірлері.</p>
+                </div>
+
+                <!-- Lesson 15 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/AKFdIwQ2f98?si=qsQ65GFMvCAMG9VW')"> 
+                    <h3>Сабақ 15</h3>
+                    <p>Квадрат теңдеу және оның түбірлері. Практикалық бөлім.</p>
+                </div>
+                
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/puzyHmWq_n0?si=GSK0yyFkuELU8his')"> 
+                    <h3>Сабақ 16</h3>
+                    <p>Квадрат теңдеу түбірлерінің формуласы.</p>
+                </div>
+
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/vWvtS8GaxoU?si=HRXb8Mc8nigKbSRX')"> 
+                    <h3>Сабақ 17</h3>
+                    <p>Квадрат теңдеу түбірлерінің формуласы. Практикалық бөлім.</p>
+                </div>
+
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/1qlAdyaGGXo?si=0n73JZWFLzIPjgYO')"> 
+                    <h3>Сабақ 18</h3>
+                    <p>Виет теоремасы.</p>
+                </div>
+
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/KitVY_FYeLs?si=haSgzfxmQKl_6Jkx')"> 
+                    <h3>Сабақ 19</h3>
+                    <p>Виет теоремасы. Практикалық бөлім.</p>
+                </div>
+
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/jYLbbCSNcqo?si=8Lef_3QO-h7czjz5')"> 
+                    <h3>Сабақ 20</h3>
+                    <p>Квадрат теңдеу түбірлерінің қасиеттері.</p>
+                </div>
+
+                <!-- Lesson 21 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/79HYcgktfqM?si=-wJvtWKTKr32AYB8')"> 
+                    <h3>Сабақ 21</h3>
+                    <p>Квадрат теңдеу түбірлерінің қасиеттері. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 22 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/8erN1rdXwTU?si=RzmLioYy_STcaNtx')"> 
+                    <h3>Сабақ 22</h3>
+                    <p>Теңдеулер шешу. 1 бөлім.</p>
+                </div>
+
+                <!-- Lesson 23 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/ekJ5vFzJSv4?si=Rz4L_6vwbq8wZRHF')"> 
+                    <h3>Сабақ 23</h3>
+                    <p>Теңдеулер шешу. 2 бөлім.</p>
+                </div>
+
+                <!-- Lesson 24 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/kiqVYZR8v_E?si=pO6iyvx3khjfc73k')"> 
+                    <h3>Сабақ 24</h3>
+                    <p>Теңдеулер шешу. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 25 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/tEp6TlV87qI?si=8hri8KT5unfXjz3j')"> 
+                    <h3>Сабақ 25</h3>
+                    <p>Теңдеулер шешу. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 26 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/rk4_JiKNIQo?si=O7qhQpSvf6d6cFOL')"> 
+                    <h3>Сабақ 26</h3>
+                    <p>Рационал теңдеулер. Квадрат теңдеуге келтірілетін мәтінді есептер.</p>
+                </div>
+
+                <!-- Lesson 27 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/SDqMY5IRVcQ?si=rLFAnRuJvR7xegP3')"> 
+                    <h3>Сабақ 27</h3>
+                    <p>Рационал теңдеулер. Квадрат теңдеуге келтірілетін мәтінді есептер. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 28 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/Yo75lS5z9OQ?si=XdilqGktLbgH-s4r')"> 
+                    <h3>Сабақ 28</h3>
+                    <p>Екінші дәрежелі теңдеулер жүйесін шешу. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 29 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/fMOt36By0wE?si=0veVOX2EzekSkKmN')"> 
+                    <h3>Сабақ 29</h3>
+                    <p>Екінші дәрежелі теңдеулер жүйесін шешу.</p>
+                </div>
+
+                <!-- Lesson 30 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/5s_vwrwbroA?si=mY4Xtf4nSCnP-52f')"> 
+                    <h3>Сабақ 30</h3>
+                    <p>Квадраттық функция және оның графигі. 1 бөлім.</p>
+                </div>
+
+                <!-- Lesson 31 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/aozNdUtCIMs?si=4SVabo4uhulgS0rS')"> 
+                    <h3>Сабақ 31</h3>
+                    <p>Квадраттық функция және оның графигі. 2 бөлім.</p>
+                </div>
+
+                <!-- Lesson 32 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/xR2CYp4Puik?si=lmfHFikIIDg2vwj4')"> 
+                    <h3>Сабақ 32</h3>
+                    <p>Квадраттық функция және оның графигі. 3 бөлім.</p>
+                </div>
+
+                <!-- Lesson 33 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/cI90f2Et3E4?si=5MnA3VXCKZLDg6g0')"> 
+                    <h3>Сабақ 33</h3>
+                    <p>Квадраттық функция және оның графигі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 34 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/lwsJnYJE5rE?si=BtVxyyr5bxhrq1dM')"> 
+                    <h3>Сабақ 34</h3>
+                    <p>Квадраттық функция және оның графигі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 35 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/GwPUarJuxuE?si=iLlybDKvh03YVJtB')"> 
+                    <h3>Сабақ 35</h3>
+                    <p>Квадраттық функция және оның графигі. Практикалық бөлім - тапсырмаларды орындау.</p>
+                </div>
+
+                <!-- Lesson 36 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/PFIAtT0W9Rg?si=fE4ZWFCuc-zBr_c4')"> 
+                    <h3>Сабақ 36</h3>
+                    <p>Функция графигін түрлендіру. 1 бөлім.</p>
+                </div>
+
+                <!-- Lesson 37 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/QG3gaKCPsys?si=fM49li85Ys08xsLI')"> 
+                    <h3>Сабақ 37</h3>
+                    <p>Функция графигін түрлендіру. 2 бөлім.</p>
+                </div>
+
+                <!-- Lesson 38 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/BlDS5GnNjuY?si=Hr8jHNJYxSsF_BM7')"> 
+                    <h3>Сабақ 38</h3>
+                    <p>Функция графигін түрлендіру. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 39 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/jeX97HIn4m4?si=PzRaoyRz4snZUJ8C')"> 
+                    <h3>Сабақ 39</h3>
+                    <p>Функция графигін түрлендіру. Практикалық бөлім.</p>
+                </div>
+
+                <!-- Lesson 40 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/Aawqgu0ErUg?si=_HBKAdzufr6T2gw-')"> 
+                    <h3>Сабақ 40</h3>
+                    <p>Кездейсоқ таңдаманың графиктік бейнесі. 1 бөлім.</p>
+                </div>
+
+                <!-- Lesson 41 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/J113InQQCcE?si=AY4_tsPiAP9pwJqi')"> 
+                    <h3>Сабақ 41</h3>
+                    <p>Кездейсоқ таңдаманың графиктік бейнесі. 2 бөлім.</p>
+                </div>
+
+                <!-- Lesson 42 -->
+                <div class="lesson-card" onclick="openVideoModal('https://youtu.be/dtIwNQcaElk?si=rI-42vCyEBeSiYot')"> 
+                    <h3>Сабақ 42</h3>
+                    <p>Кездейсоқ таңдаманың графиктік бейнесі. Практикалық бөлім.</p>
+                </div>
+                <!-- Модальное окно -->
+                <div id="videoModal" class="modal">
+                    <div class="modal-content">
+                    <span class="close" onclick="closeVideoModal()">&times;</span>
+                    <iframe id="videoFrame" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-section">
+            <a href="#" class="logo">Sha<span>byt</span></a>
+            <p>Біз балаларға математиканы оңай үйрену үшін осы платформаны жасадық.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Жылдам Сілтемелер</h3>
+            <ul>
+                <li><a href="#">Басты бет</a></li>
+                <li><a href="#">Сабақтар</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакт</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Байланыс</h3>
+            <p><i class='bx bx-map'></i> Алматы, Қазақстан</p>
+            <p><i class='bx bx-phone'></i> +7 777 777 77 77</p>
+            <p><i class='bx bx-envelope'></i> info@shabyt.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+            <h3>Бізбен байланысу</h3>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Shabyt. Барлық құқықтар қорғалған.</p>
+    </div>
+</footer>
+
+    <!-- JavaScript -->
+    <script src="C:\Users\user\Desktop\Diploma work\Shabyt\Classes\8class\jss\alg8.js"></script>
+</body>
+</html>
