@@ -63,10 +63,17 @@ type Claims struct {
 	jwt.RegisteredClaims
 }
 
+type Class struct {
+	ID    uint   `gorm:"primaryKey"`
+	Grade int    `gorm:"not null"` // Класс (1-11)
+	Name  string `gorm:"not null"` // Название, например "Математика"
+}
+
 type Lesson struct {
-	ID         uint   `gorm:"primaryKey"`
+	ID         uint   `gorm:"primaryKey;autoIncrement"`
 	Title      string `gorm:"not null"`
 	YoutubeURL string `gorm:"not null"`
+	ClassID    uint   `gorm:"not null"`
 }
 
 var db *gorm.DB
@@ -83,6 +90,7 @@ func initDB() {
 
 	db.AutoMigrate(&User{})
 	db.AutoMigrate(&Lesson{})
+	db.AutoMigrate(&Class{})
 }
 
 // func register(c *gin.Context) {
@@ -175,6 +183,42 @@ func login(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"token": tokenString})
 }
 
+func createClass(c *gin.Context) {
+	var input Class
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Неверный формат запроса"})
+		return
+	}
+
+	// Проверяем, существует ли уже класс с таким же Grade и Name
+	var existingClass Class
+	if err := db.Where("grade = ? AND name = ?", input.Grade, input.Name).First(&existingClass).Error; err == nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Такой класс уже существует"})
+		return
+	}
+
+	// Создаем новый класс
+	class := Class{Grade: input.Grade, Name: input.Name}
+	if err := db.Create(&class).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Ошибка при создании класса"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Класс успешно создан", "class": class})
+}
+
+func deleteClass(c *gin.Context) {
+	id := c.Param("id") // Получаем ID класса из URL
+
+	// Удаляем класс
+	if err := db.Delete(&Class{}, id).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete class"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Class deleted successfully"})
+}
+
 func createLesson(c *gin.Context) {
 	var input Lesson
 	if err := c.ShouldBindJSON(&input); err != nil {
@@ -182,15 +226,25 @@ func createLesson(c *gin.Context) {
 		return
 	}
 	fmt.Println("Get data: ", input)
-	lesson := Lesson{Title: input.Title, YoutubeURL: input.YoutubeURL}
+	lesson := Lesson{Title: input.Title, YoutubeURL: input.YoutubeURL, ClassID: input.ClassID} // Создаем новый урок
 	db.Create(&lesson)
 
 	c.JSON(http.StatusOK, gin.H{"message": "Lesson created successfully", "lesson": lesson})
 }
 
 func getLessons(c *gin.Context) {
+	// var lessons []Lesson
+	// db.Find(&lessons)
+
+	// c.JSON(http.StatusOK, lessons)
 	var lessons []Lesson
-	db.Find(&lessons)
+	classID := c.Query("class_id") // Получаем class_id из запроса
+
+	if classID != "" {
+		db.Where("class_id = ?", classID).Find(&lessons)
+	} else {
+		db.Find(&lessons)
+	}
 
 	c.JSON(http.StatusOK, lessons)
 }
@@ -229,13 +283,22 @@ func updateLesson(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Lesson updated successfully", "lesson": lesson})
 }
 func deleteLesson(c *gin.Context) {
-	var lesson Lesson
-	if err := db.First(&lesson, c.Param("id")).Error; err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Lesson not found"})
+	// var lesson Lesson
+	// if err := db.First(&lesson, c.Param("id")).Error; err != nil {
+	// 	c.JSON(http.StatusNotFound, gin.H{"error": "Lesson not found"})
+	// 	return
+	// }
+
+	// db.Delete(&lesson)
+
+	// c.JSON(http.StatusOK, gin.H{"message": "Lesson deleted successfully"})
+	id := c.Param("id") // Получаем ID урока из URL
+
+	// Удаляем урок
+	if err := db.Delete(&Lesson{}, id).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete lesson"})
 		return
 	}
-
-	db.Delete(&lesson)
 
 	c.JSON(http.StatusOK, gin.H{"message": "Lesson deleted successfully"})
 }
@@ -259,6 +322,9 @@ func main() {
 	r.POST("/register", register)
 	r.POST("/login", login)
 	r.POST("/send-email", sendEmailHandler)
+
+	r.POST("/classes", createClass)
+	r.POST("/classes/:id", deleteClass)
 
 	r.Run(":8080")
 }

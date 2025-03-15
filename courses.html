@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabyt - Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-black text-white p-6 flex flex-col justify-between fixed h-full">
+            <div>
+                <h1 class="text-2xl font-bold text-red-500">Shabyt</h1>
+                <nav class="mt-6 space-y-4">
+                    <a href="index.html" class="block flex items-center space-x-2 text-gray-300 hover:text-white">
+                        <span>🏠 Home</span>
+                    </a>
+                    <a href="profile.html" class="block flex items-center space-x-2 text-gray-300 hover:text-white">
+                        <span>👤 Profile</span>
+                    </a>
+                    <a href="messages.html" class="block flex items-center space-x-2 text-gray-300 hover:text-white">
+                        <span>💬 Messages</span>
+                    </a>
+                    <a href="courses.html" class="block flex items-center space-x-2 text-white font-bold">
+                        <span>📚 Courses</span>
+                    </a>
+                    <a href="dashboard.html" class="block flex items-center space-x-2 text-gray-300 hover:text-white">
+                        <span>📊 Dashboard</span>
+                    </a>
+                    <a href="settings.html" class="block flex items-center space-x-2 text-gray-300 hover:text-white">
+                        <span>⚙️ Settings</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="mt-auto pb-6">
+                <a href="#" class="block text-gray-300 hover:text-white">❓ Help</a>
+                <a href="#" class="block text-gray-300 hover:text-white mt-4">🚪 Log out</a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 p-8 ml-64 overflow-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold">My Courses</h2>
+                <div class="grid grid-cols-3 gap-6 mt-4">
+                    <div class="p-4 border rounded-lg shadow-sm">
+                        <img src="img/1st.png" class="w-full h-40 object-cover rounded-md mb-2">
+                        <p class="font-bold">Physics</p>
+                        <p class="text-xs text-gray-500">Explore the laws of physics...</p>
+                        <button class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg w-full">View Course</button>
+                    </div>
+                    <div class="p-4 border rounded-lg shadow-sm">
+                        <img src="img/11st.png" class="w-full h-40 object-cover rounded-md mb-2">
+                        <p class="font-bold">Mathematics</p>
+                        <p class="text-xs text-gray-500">Advanced algebra and calculus...</p>
+                        <button class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg w-full">View Course</button>
+                    </div>
+                    <div class="p-4 border rounded-lg shadow-sm">
+                        <img src="img/10th.png" class="w-full h-40 object-cover rounded-md mb-2">
+                        <p class="font-bold">Chemistry</p>
+                        <p class="text-xs text-gray-500">Organic and inorganic chemistry...</p>
+                        <button class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg w-full">View Course</button>
+                    </div>
+                    <div class="p-4 border rounded-lg shadow-sm">
+                        <img src="img/9th.png" class="w-full h-40 object-cover rounded-md mb-2">
+                        <p class="font-bold">History</p>
+                        <p class="text-xs text-gray-500">Dive into world history and civilizations...</p>
+                        <button class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg w-full">View Course</button>
+                    </div>
+                    <div class="p-4 border rounded-lg shadow-sm">
+                        <img src="img/8th.png" class="w-full h-40 object-cover rounded-md mb-2">
+                        <p class="font-bold">English</p>
+                        <p class="text-xs text-gray-500">Improve your English language skills...</p>
+                        <button class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg w-full">View Course</button>
+                    </div>
+                    <div class="p-4 border rounded-lg shadow-sm">
+                        <img src="img/7th.png" class="w-full h-40 object-cover rounded-md mb-2">
+                        <p class="font-bold">Programming</p>
+                        <p class="text-xs text-gray-500">Learn Python, JavaScript, and more...</p>
+                        <button class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg w-full">View Course</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
