@@ -74,9 +74,6 @@ type Lesson struct {
 	Title      string `gorm:"not null"`
 	YoutubeURL string `gorm:"not null"`
 	ClassID    uint   `gorm:"not null"`
-	Class      Class  `gorm:"foreignKey:ClassID"`
-	TeacherID  uint   `gorm:"not null"`
-	Teacher    User   `gorm:"foreignKey:TeacherID"`
 }
 
 var db *gorm.DB
@@ -210,6 +207,18 @@ func createClass(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Класс успешно создан", "class": class})
 }
 
+func deleteClass(c *gin.Context) {
+	id := c.Param("id") // Получаем ID класса из URL
+
+	// Удаляем класс
+	if err := db.Delete(&Class{}, id).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete class"})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"message": "Class deleted successfully"})
+}
+
 func createLesson(c *gin.Context) {
 	var input Lesson
 	if err := c.ShouldBindJSON(&input); err != nil {
@@ -217,7 +226,7 @@ func createLesson(c *gin.Context) {
 		return
 	}
 	fmt.Println("Get data: ", input)
-	lesson := Lesson{Title: input.Title, YoutubeURL: input.YoutubeURL}
+	lesson := Lesson{Title: input.Title, YoutubeURL: input.YoutubeURL, ClassID: input.ClassID} // Создаем новый урок
 	db.Create(&lesson)
 
 	c.JSON(http.StatusOK, gin.H{"message": "Lesson created successfully", "lesson": lesson})
@@ -315,6 +324,7 @@ func main() {
 	r.POST("/send-email", sendEmailHandler)
 
 	r.POST("/classes", createClass)
+	r.POST("/classes/:id", deleteClass)
 
 	r.Run(":8080")
 }
