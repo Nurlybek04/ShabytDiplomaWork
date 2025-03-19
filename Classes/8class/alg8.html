@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алгебра 8-ші сынып</title>
-    <link rel="stylesheet" href="csss\alg8.css">
+    <link rel="stylesheet" href="csss/alg8.css">
 </head>
 <body>
     <!-- Header -->
@@ -267,18 +267,20 @@
                     <h3>Сабақ 42</h3>
                     <p>Кездейсоқ таңдаманың графиктік бейнесі. Практикалық бөлім.</p>
                 </div>
-                <!-- Модальное окно -->
-                <div id="videoModal" class="modal">
-                    <div class="modal-content">
-                    <span class="close" onclick="closeVideoModal()">&times;</span>
-                    <iframe id="videoFrame" width="800" height="450" frameborder="0" allowfullscreen></iframe>
-                </div>
             </div>
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
+<!-- Модальное окно -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+        <div class="video-container">
+            <iframe id="videoFrame" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+            <button id="testButton" style="display: none; margin-left: 20px;">Тест</button>
+        </div>
+    </div>
+</div>
     <!-- Footer -->
 <footer>
     <div class="footer-container">
@@ -324,6 +326,8 @@
 </footer>
 
     <!-- JavaScript -->
-    <script src="jss\alg8.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="jss/alg8.js"></script>
 </body>
 </html>
